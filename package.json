@@ -1,0 +1,24 @@
+{
+  "name": "innov8projecttracker",
+  "version": "1.0.0",
+  "description": "A NodeJS, React, and GraphQL App for tracking innov8projects",
+  "main": "/server",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./server"
+  },
+  "author": "Todd Mantell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
+    "react": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}
