@@ -5,7 +5,7 @@
   "main": "/server",
   "scripts": {
     "test": "jest",
-    "start": "node ./server"
+    "start": "webpack-dev-server --inline"
   },
   "author": "Todd Mantell",
   "license": "ISC",
@@ -13,12 +13,17 @@
     "express": "^4.15.4",
     "express-graphql": "^0.6.7",
     "graphql": "^0.10.5",
-    "react": "^15.6.1",
+    "preact": "^8.2.1",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "webpack": "^3.5.5"
+    "redux": "^3.7.2"
   },
   "devDependencies": {
-    "jest": "^20.0.4"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.4",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
