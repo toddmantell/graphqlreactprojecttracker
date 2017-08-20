@@ -1,15 +1,15 @@
-// import {h, Component} from 'preact';
+import {h, Component} from 'preact';
 
-// class App extends Component {
-//   constructor() {
+export default class App extends Component {
+  constructor() {
+    super();
+  }
 
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         Application Root
-//       </div>
-//     );
-//   }
-// }
+  render() {
+    return (
+      <div>
+        Application Root
+      </div>
+    );
+  }
+}

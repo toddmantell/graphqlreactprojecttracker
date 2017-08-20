@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   //input
-  entry: './src/components/app',
+  entry: './src/components',
 
 //output
   output: {
@@ -15,6 +15,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?/i,
+        exclude: /(node_modules)/,
         loader: 'babel-loader',
         options: {
           presets: ['env'],
