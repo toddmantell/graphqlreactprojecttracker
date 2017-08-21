@@ -14,8 +14,10 @@
     "express-graphql": "^0.6.7",
     "graphql": "^0.10.5",
     "preact": "^8.2.1",
+    "preact-compat": "^3.17.0",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
