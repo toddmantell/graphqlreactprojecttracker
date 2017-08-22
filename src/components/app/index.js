@@ -1,12 +1,6 @@
 import {h, Component} from 'preact';
 import {Loading} from '../loading/Loading';
-
-import styled from 'styled-components';
-
-const Button = styled.button(`
-  width: 100px;
-  background-color: blue;
-`);
+import Layout from './Layout';
 
 export default class App extends Component {
   constructor() {
@@ -27,10 +21,7 @@ export default class App extends Component {
 
   renderLoadingOrApp() {
       return this.state.loading ? <Loading /> : (
-        <div>
-          Application Root
-          <br /><Button>I'm a button</Button>
-        </div>
+        <Layout />
       );
   }
 
