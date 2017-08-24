@@ -1,10 +1,9 @@
 import {h} from 'preact';
 
 export const Loading = props => {
-  return (<main>
+  return (
       <div>
         loading...
-      </div>
-    </main>    
+      </div>   
   );
 };

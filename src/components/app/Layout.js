@@ -12,3 +12,5 @@ const Layout = props => {
     </MainDiv>
     );
 }
+
+export default Layout;

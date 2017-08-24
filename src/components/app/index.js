@@ -1,5 +1,5 @@
 import {h, Component} from 'preact';
-import {Loading} from '../loading/Loading';
+import {Loading} from '../loading';
 import Layout from './Layout';
 
 export default class App extends Component {
