@@ -1,7 +1,7 @@
 module.exports = `
 type Project implements IProject {
   id: Int,
-  name: String!,
+  name: String,
   team: [Team]
 }
 `;

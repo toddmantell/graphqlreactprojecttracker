@@ -1,5 +1,5 @@
 module.exports = `
   interface IProject {
-    name: String!
+    name: String
   }
 `;

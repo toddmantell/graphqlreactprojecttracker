@@ -1,5 +1,11 @@
-const getProject = id => {
-  
+const {projectsRepo} = require('../../server/repository');
+
+const project = (name) => {
+  return projectsRepo.getProject(name);
 };
 
-module.exports = {};
+const projects = () => {
+  return projectsRepo.getAllProjects();
+};
+
+module.exports = {projects, project};
