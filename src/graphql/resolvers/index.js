@@ -1,7 +1,9 @@
 const {projectsRepo} = require('../../server/repository');
 
-const project = (name) => {
-  return projectsRepo.getProject(name);
+const project = (nameObject) => {
+  const project = projectsRepo.getProject(nameObject.name);
+
+  return project;
 };
 
 const projects = () => {

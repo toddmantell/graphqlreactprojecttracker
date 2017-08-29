@@ -1,10 +1,12 @@
 
 const projectsRepo = {
   getProject: (name, id = null) => {
-    return projectsCollection.filter(item => {
+    const project = projectsCollection.filter(item => {
       if (id) return item.id === id;
       else if (name) return item.name === name;
     });
+
+    return project[0];
   },
   getAllProjects: () => {
     return projectsCollection;
@@ -37,9 +39,19 @@ const projectsCollection = [
     name: 'CDB',
     team: {
       name: 'CDB Team',
-      lead: 'Shujaat',
-      qa: 'Mamata',
-      developers: ['Joe', 'Farhan', 'Shujaat', 'Todd']
+      lead: 'Lead',
+      qa: ['Sen'],
+      developers: ['Catherine', 'Xiaofeng', 'Jim']
+    }
+  },
+  {
+    id: 4,
+    name: 'FPSC',
+    team: {
+      name: 'FPSC Team',
+      lead: 'Vikas',
+      qa: ['Sen'],
+      developers: ['Farhan', 'Xiaofeng', 'Jim']
     }
   }
 ];
