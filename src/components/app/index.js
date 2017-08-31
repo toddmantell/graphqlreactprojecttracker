@@ -16,14 +16,14 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const projects = await dataService.getProjects();
+    const {data} = await dataService.getProjects();
 
-    console.log('projects', projects);
+    this.setState({loading: false, projects: data.projects});
   }
 
   renderLoadingOrApp() {
       return this.state.loading ? <Loading /> : (
-        <Layout />
+        <Layout projects={this.state.projects}/>
       );
   }
 

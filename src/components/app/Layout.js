@@ -8,9 +8,19 @@ const MainDiv = styled.div`
 const Layout = props => {
   return (
     <MainDiv>
-      Application Root
+      Choose your project: 
+      {handleProjects(props.projects)}
     </MainDiv>
     );
+}
+
+function handleProjects(projects) {
+  return (
+    <select>
+      {projects.map((item, index) => {
+        return <option key={index} value={item.name}>{item.name}</option>;
+      })}
+    </select>);
 }
 
 export default Layout;
