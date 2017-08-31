@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   //input
-  entry: './src/components',
+  entry: ['babel-polyfill', './src/components'],
 
 //output
   output: {

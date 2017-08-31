@@ -1,22 +1,24 @@
 import {h, Component} from 'preact';
 import {Loading} from '../loading';
 import Layout from './Layout';
+import * as dataService from '../services/dataService';
 
 export default class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      loading: true
+      loading: true,
+      projects: []
     };
 
     this.renderLoadingOrApp = this.renderLoadingOrApp.bind(this);
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({loading: false});
-    }, 750);
+  async componentDidMount() {
+    const projects = await dataService.getProjects();
+
+    console.log('projects', projects);
   }
 
   renderLoadingOrApp() {
