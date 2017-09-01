@@ -4,16 +4,12 @@ import Layout from './Layout';
 import * as dataService from '../services/dataService';
 
 export default class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
+  state = {
       loading: true,
-      projects: []
-    };
+    projects: []
+  };
 
-    this.renderLoadingOrApp = this.renderLoadingOrApp.bind(this);
-  }
+  renderLoadingOrApp = this.renderLoadingOrApp.bind(this);
 
   async componentDidMount() {
     const {data} = await dataService.getProjects();
