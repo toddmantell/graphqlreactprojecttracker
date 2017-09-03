@@ -1,6 +1,7 @@
 export const projectsTemplate = `
   {
     projects {
+      id
       name
       team {
         lead
@@ -14,6 +15,7 @@ export const projectsTemplate = `
 export const project = name => `
 {
   project(name: ${name}) {
+    id
     name
     team {
       lead

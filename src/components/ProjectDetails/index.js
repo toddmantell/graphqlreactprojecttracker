@@ -26,8 +26,8 @@ function renderTeamDetails(project) {
   return (
     <div>
       <teamDetail>Lead: {project.team.lead}</teamDetail>
-      <teamDetail>qa: {renderCollectionInline(project.team.qa)}</teamDetail>
-      <teamDetail>developers: {renderCollectionInline(project.team.developers)}</teamDetail>
+      <teamDetail>qa: {project.team.qa}</teamDetail>
+      <teamDetail>developers: {project.team.developers}</teamDetail>
     </div>
   );
 }

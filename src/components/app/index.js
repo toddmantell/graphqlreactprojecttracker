@@ -29,8 +29,8 @@ export default class App extends Component {
 
   handleDropDownChange(event) {
     const chosenProject = this.state.projects.filter(project => {
-      return project.name = event.target.value;
-    })[0];
+      return project.id == event.target.value;
+    })[0];    
 
     if (chosenProject) this.setState({chosenProject});
   }

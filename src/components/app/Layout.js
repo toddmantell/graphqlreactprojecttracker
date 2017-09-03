@@ -30,7 +30,7 @@ function renderProjectsDropdown(projects, onChange) {// Where to pass the chosen
   return (
     <select onChange={onChange}>
       {projects.map((item, index) => {
-        return <option key={index} value={item}>{item.name}</option>;
+        return <option key={index} value={item.id}>{item.name}</option>;
       })}
     </select>);
 }
