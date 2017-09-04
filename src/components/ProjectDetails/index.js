@@ -1,11 +1,11 @@
 import {h} from 'preact';
 import styled from 'styled-components';
 
-const projectDetail = styled.span`
+const ProjectDetail = styled.span`
   display: block;
 `;
 
-const teamDetail = styled.span`
+const TeamDetail = styled.span`
   display: block;
   padding-left: 10px;
 `;
@@ -13,8 +13,8 @@ const teamDetail = styled.span`
 const ProjectDetails = ({project}) => {
   return (
     <section>
-      <projectDetail>Name: {project.name}</projectDetail>
-      <projectDetail>Team:</projectDetail>
+      <ProjectDetail>Name: {project.name}</ProjectDetail>
+      <ProjectDetail>Team:</ProjectDetail>
       {renderTeamDetails(project)}
     </section>
     );
@@ -25,9 +25,9 @@ export default ProjectDetails;
 function renderTeamDetails(project) {
   return (
     <div>
-      <teamDetail>Lead: {project.team.lead}</teamDetail>
-      <teamDetail>qa: {project.team.qa}</teamDetail>
-      <teamDetail>developers: {project.team.developers}</teamDetail>
+      <TeamDetail>Lead: {project.team.lead}</TeamDetail>
+      <TeamDetail>QA: {project.team.qa}</TeamDetail>
+      <TeamDetail>Developers: {project.team.developers}</TeamDetail>
     </div>
   );
 }
