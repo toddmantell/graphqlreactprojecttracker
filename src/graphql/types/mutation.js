@@ -1,0 +1,5 @@
+const mutation = `
+  mutation {
+    
+  }
+`;

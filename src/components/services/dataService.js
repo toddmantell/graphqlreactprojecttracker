@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import * as queries from './queryTemplates';
+import 'isomorphic-fetch';
 
 const basicFetchOptions = {method: 'POST', headers: {'Content-Type': 'application/graphql'}};
 

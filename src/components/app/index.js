@@ -1,4 +1,4 @@
-import {h, Component} from 'preact';
+import React, { Component } from 'react';
 import {Loading} from '../loading';
 import Layout from './Layout';
 import * as dataService from '../services/dataService';
@@ -20,6 +20,7 @@ export default class App extends Component {
       this.setState({loading: false, projects: data.projects});
     }, 750);
   }
+  //For Innovate Session: have multiple microservices that feed into the resolvers?
 
   renderLoadingOrApp() {
       return this.state.loading ? <Loading /> : (

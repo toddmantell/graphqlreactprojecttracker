@@ -20,20 +20,13 @@ module.exports = {
         options: {
           presets: ['env'],
           plugins: [
-            ['transform-react-jsx', {pragma: 'h'}],
+            ['transform-react-jsx'],
             ['transform-class-properties']
           ]
         }
       }
     ]
   },
-
-  resolve: {
-        alias: {
-            'react': 'preact-compat',
-            'react-dom': 'preact-compat'
-        }
-    },
 
   //sourcemaps
   devtool: 'source-map',
