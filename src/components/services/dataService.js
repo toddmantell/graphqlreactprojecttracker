@@ -1,11 +1,11 @@
-import merge from 'lodash/merge';
+import _merge from 'lodash/merge';
 import * as queries from './queryTemplates';
 import 'isomorphic-fetch';
 
 const basicFetchOptions = {method: 'POST', headers: {'Content-Type': 'application/graphql'}};
 
 export async function getProjects() {
-  const fetchOptionsWithQuery = merge({}, basicFetchOptions, {body: queries.projectsTemplate});
+  const fetchOptionsWithQuery = _merge({}, basicFetchOptions, {body: queries.projectsTemplate});
 
   try {
     const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
@@ -25,7 +25,7 @@ export async function getProjects() {
 export async function getProject(name) {
   const projectQuery = queries.project(name);
 
-  const fetchOptionsWithQuery = merge({}, basicFetchOptions, {body: projectQuery});
+  const fetchOptionsWithQuery = _merge({}, basicFetchOptions, {body: projectQuery});
 
   const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
 
