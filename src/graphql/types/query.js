@@ -4,7 +4,7 @@ const Team = require('./Team');
 
 const query = interfaces + Project + Team + `
   type Query {
-    project(name: String!): Project
+    project(id: Int!): Project
     projects: [Project]
   }
 `;

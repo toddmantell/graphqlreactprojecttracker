@@ -6,10 +6,10 @@ const fetchOptions = {
   headers: {"Content-Type": "application/json", "Accept": "application/json"}
 };
 
-const project = async (nameObject) => {
-  const projects = await getProjects(fetchOptions);
+const project = async (graphqlParams) => {
+  const response = await fetch(`http://localhost:4000/projects/${graphqlParams.id}`, fetchOptions);
 
-  const project = projects.filter(project => project.name === nameObject.name)[0];
+  const project = await response.json();
 
   return project;
 };

@@ -5,7 +5,7 @@
   "main": "/server",
   "scripts": {
     "test": "jest --no-watchman",
-    "start": "webpack-dev-server --inline"
+    "start": "nps"
   },
   "author": "Todd Mantell",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^2.9.1",
     "jest": "^20.0.4",
+    "nps": "^5.7.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   }

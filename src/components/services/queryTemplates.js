@@ -12,9 +12,9 @@ export const projectsTemplate = `
   }
 `;
 
-export const project = name => `
+export const project = id => `
 {
-  project(name: ${name}) {
+  project(name: ${id}) {
     id
     name
     team {

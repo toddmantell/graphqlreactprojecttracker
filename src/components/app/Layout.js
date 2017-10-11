@@ -8,7 +8,8 @@ const MainDiv = styled.div`
 `;
 
 const ProjectsDD = styled.select`
-  position: absolute;
+  position: relative;
+  top: 50px;
   width: 200px;
   margin: 0 auto;
 

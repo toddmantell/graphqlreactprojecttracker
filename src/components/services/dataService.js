@@ -11,7 +11,6 @@ export async function getProjects() {
     const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
     
     const parsedData = await result.json();
-    console.log('parsedData in data service', parsedData);
 
     return parsedData;
     
@@ -22,8 +21,8 @@ export async function getProjects() {
   return null;
 }
 
-export async function getProject(name) {
-  const projectQuery = queries.project(name);
+export async function getProject(id) {
+  const projectQuery = queries.project(id);
 
   const fetchOptionsWithQuery = _merge({}, basicFetchOptions, {body: projectQuery});
 

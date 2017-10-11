@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   color: #fff;
   background-color: lightblue;
   height: 40px;
