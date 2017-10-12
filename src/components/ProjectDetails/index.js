@@ -5,7 +5,14 @@ import TeamDetails from './TeamDetails';
 
 const ProjectsSection = styled.section`
   position: relative;
-  margin: 75px 0 0 40%;
+  margin: 75px 0 0 32%;
+  padding: 10px;
+  
+  width: 325px;
+  border-radius: 2px;
+  background-color: lightgoldenrodyellow;
+  box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.57);
+
 `;
 
 const ProjectDetail = styled.span`
