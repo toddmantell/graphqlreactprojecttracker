@@ -15,10 +15,10 @@ const project = async (graphqlParams) => {
 };
 
 const projects = () => {
-  return getProjects(fetchOptions) || [];
+  return getAllProjects(fetchOptions) || [];
 };
 
-async function getProjects (fetchOptions) {
+async function getAllProjects (fetchOptions) {
   try {
     const response = await fetch('http://localhost:4000/projects', fetchOptions);
     
