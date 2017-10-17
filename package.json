@@ -4,17 +4,18 @@
   "description": "A NodeJS, React, and GraphQL App for tracking innov8projects",
   "main": "/server",
   "scripts": {
-    "test": "jest --no-watchman",
     "start": "nps"
   },
   "author": "Todd Mantell",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
     "express-graphql": "^0.6.7",
     "graphql": "^0.10.5",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -32,8 +34,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^2.9.1",
+    "enzyme-adapter-react-16": "^1.0.1",
     "jest": "^20.0.4",
     "nps": "^5.7.1",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   }

@@ -1,4 +1,5 @@
 require('isomorphic-fetch');
+const _omit = require('lodash/omit');
 
 const fetchOptions = {
   method: 'GET', 
@@ -18,6 +19,16 @@ const projects = () => {
   return getAllProjects(fetchOptions) || [];
 };
 
+const createProject = async (team) => {
+  const postFetch = {..._omit(fetchOptions, 'method'), method: 'POST', body: team};
+  
+  const response = await fetch('http://localhost:4000/projects', postFetch);
+
+  const data = await response.json();
+
+  return data;
+}
+
 async function getAllProjects (fetchOptions) {
   try {
     const response = await fetch('http://localhost:4000/projects', fetchOptions);
@@ -31,4 +42,4 @@ async function getAllProjects (fetchOptions) {
   }
 }
 
-module.exports = {projects, project};
+module.exports = {projects, project, createProject};

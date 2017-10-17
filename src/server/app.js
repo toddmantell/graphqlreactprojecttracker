@@ -2,11 +2,12 @@ const app = require('express')();
 const graphql = require('graphql');
 const GraphQLHTTP = require('express-graphql');
 const resolvers = require('../graphql/resolvers');
-const query = require('../graphql/types/query');
+//const query = require('../graphql/types/query');
 
 const cors = require('cors');
 
-const schema = graphql.buildSchema(query);
+const combinedSchema = require('../graphql/types/schema');//need to combine the query with the mutation
+const schema = graphql.buildSchema(combinedSchema);
 
 app.options('*', cors());
 
