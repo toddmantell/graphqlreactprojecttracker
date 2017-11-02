@@ -20,7 +20,7 @@ const projects = () => {
 };
 
 const createProject = async (team) => {
-  const postFetch = {..._omit(fetchOptions, 'method'), method: 'POST', body: team};
+  const postFetch = {..._omit(fetchOptions, 'method'), method: 'POST', body: JSON.stringify(team)};
   
   const response = await fetch('http://localhost:4000/projects', postFetch);
 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const DropdownDiv = styled.div`
   position: relative;
   top: 50px;
-  margin-left: 40%;
+  margin-left: 37%;
 `;
 
 const ProjectsDD = styled.select`

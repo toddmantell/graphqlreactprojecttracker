@@ -1,4 +1,4 @@
-const Team = require('./Team');
+const Project = require('./Project');
 
 const mutation = `
   input TeamInput {
@@ -9,8 +9,8 @@ const mutation = `
   }
 
   type Mutation {
-    createProject(name: String, team: TeamInput) : Int
-    updateProject(id: Int, name: String, team: TeamInput): Int
+    createProject(name: String, team: TeamInput) : Project
+    updateProject(id: Int, name: String, team: TeamInput): Project
   }
 `;
 

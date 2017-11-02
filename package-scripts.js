@@ -1,7 +1,7 @@
 module.exports = {
   scripts: {
-    default: "webpack-dev-server --inline",
-    server: "nodemon src/server",
+    ui: "webpack-dev-server --inline",
+    graphql: "nodemon src/server",
     test: "jest --no-watchman",
   }
 };

@@ -2,8 +2,6 @@ const app = require('express')();
 const graphql = require('graphql');
 const GraphQLHTTP = require('express-graphql');
 const resolvers = require('../graphql/resolvers');
-//const query = require('../graphql/types/query');
-
 const cors = require('cors');
 
 const combinedSchema = require('../graphql/types/schema');//need to combine the query with the mutation
@@ -23,5 +21,6 @@ app.use('/graphql', GraphQLHTTP({
   rootValue: resolvers
   })
 );
+
 
 module.exports = app;

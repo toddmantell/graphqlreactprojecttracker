@@ -8,12 +8,18 @@ const MainDiv = styled.div`
   padding: 0;
 `;
 
+const Container = styled.section`
+
+`;
+
 const Layout = props => {  
   return (
     <MainDiv>
       <NavBar />
+      <Container>
       <ProjectsDropdown projects={props.projects} onChange={props.onChange} />
       {props.chosenProject ? <ProjectDetails project={props.chosenProject} /> : null}
+      </Container>
     </MainDiv>
     );
 }
