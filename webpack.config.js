@@ -33,6 +33,7 @@ module.exports = {
 
   //server
   devServer: {
+		inline: true,
     contentBase: path.join(__dirname, 'src', 'components'),
     compress: true,
     historyApiFallback: true
