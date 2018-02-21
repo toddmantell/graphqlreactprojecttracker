@@ -10,25 +10,22 @@ export async function getProjects() {
   try {
     const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
     
-    const parsedData = await result.json();
-
-    return parsedData;
-    
+    return await result.json();    
   } catch (error) {
-    console.log(error);
+    throw error;
   }
-
-  return null;
 }
 
 export async function getProject(id) {
   const projectQuery = queries.project(id);
 
   const fetchOptionsWithQuery = _merge({}, basicFetchOptions, {body: projectQuery});
+  
+  try {
+    const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
 
-  const result = await fetch('http://localhost:8888/graphql', fetchOptionsWithQuery);
-
-  const parsedData = await result.json();
-
-  return parsedData;
+    return await result.json();
+  } catch(error) {
+    throw error;
+  }
 }
